@@ -24,5 +24,6 @@ class AppServiceProvider extends ServiceProvider
     
             return $manager;
         });
+        $this->app->register('Folklore\Image\ImageServiceProvider');
     }
 }

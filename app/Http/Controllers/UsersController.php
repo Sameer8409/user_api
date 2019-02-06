@@ -30,11 +30,11 @@ class UsersController extends Controller {
             $rules=  [
                 'email'         => 'required|email|unique:users',
                 'password'      => 'required',
-                'type'          => 'required',
+                'type'          => 'required|integer|between:0,2',
                 'f_name'        => 'required|string',
                 'l_name'        => 'required|string',
                 'age'           => 'required',
-                'gender'        => 'required',
+                'gender'        => 'required||integer|between:0,2',
                 'location'      => 'required|string',
                 'image_name.*'  => 'required|file|mimes:jpeg,jpg,png,gif'
             ];
